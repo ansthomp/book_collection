@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_01_30_180210) do
+ActiveRecord::Schema[7.0].define(version: 2023_01_30_193040) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,6 +21,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_30_180210) do
     t.string "author"
     t.float "price"
     t.date "publishedDate"
+    t.string "author_"
+    t.float "price_"
+    t.date "publishedDate_"
   end
 
   create_table "posts", force: :cascade do |t|
