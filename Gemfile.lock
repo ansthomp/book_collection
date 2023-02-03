@@ -250,7 +250,8 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   brakeman
-  capybara
+  capybara (>= 3.26)
+
   debug
   importmap-rails
   jbuilder
