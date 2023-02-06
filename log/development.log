@@ -1876,3 +1876,94 @@ Did you mean?  new_user_path):
     44: <%= link_to 'New User', new_users_path%>
   
 app/views/user_books/index.html.erb:44
+Started GET "/user_books" for 172.17.0.1 at 2023-02-06 18:23:11 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (1.5ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:17
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" DESC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_books/index.html.erb:19
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 ORDER BY "books"."id" DESC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user_books/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" DESC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_books/index.html.erb:19
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 ORDER BY "books"."id" DESC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/user_books/index.html.erb:20
+  Rendered user_books/index.html.erb within layouts/application (Duration: 161.5ms | Allocations: 19925)
+  Rendered layout layouts/application.html.erb (Duration: 1726.5ms | Allocations: 54911)
+Completed 200 OK in 1944ms (Views: 1753.7ms | ActiveRecord: 13.5ms | Allocations: 59869)
+
+
+Started GET "/user" for 172.17.0.1 at 2023-02-06 18:26:23 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+Started GET "/users" for 172.17.0.1 at 2023-02-06 18:26:35 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/_user.html.erb (Duration: 5.8ms | Allocations: 193)
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 16)
+  Rendered users/index.html.erb within layouts/application (Duration: 77.4ms | Allocations: 5202)
+  Rendered layout layouts/application.html.erb (Duration: 1616.7ms | Allocations: 40105)
+Completed 200 OK in 1782ms (Views: 1626.2ms | ActiveRecord: 6.3ms | Allocations: 44255)
+
+
+Started GET "/users/1" for 172.17.0.1 at 2023-02-06 18:26:58 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:63:in `set_user'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered users/show.html.erb within layouts/application (Duration: 9.1ms | Allocations: 920)
+  Rendered layout layouts/application.html.erb (Duration: 135.1ms | Allocations: 3219)
+Completed 200 OK in 327ms (Views: 137.4ms | ActiveRecord: 0.6ms | Allocations: 7785)
+
+
+Started GET "/user_books" for 172.17.0.1 at 2023-02-06 18:27:07 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/index.html.erb within layouts/application
+  [1m[36mUserBook Load (0.8ms)[0m  [1m[34mSELECT "user_books".* FROM "user_books"[0m
+  ↳ app/views/user_books/index.html.erb:17
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" DESC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_books/index.html.erb:19
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 ORDER BY "books"."id" DESC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/user_books/index.html.erb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" DESC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/user_books/index.html.erb:19
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = $1 ORDER BY "books"."id" DESC LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/user_books/index.html.erb:20
+  Rendered user_books/index.html.erb within layouts/application (Duration: 96.6ms | Allocations: 13345)
+  Rendered layout layouts/application.html.erb (Duration: 234.7ms | Allocations: 15762)
+Completed 200 OK in 341ms (Views: 239.0ms | ActiveRecord: 8.7ms | Allocations: 17760)
+
+
+Started GET "/user_books/new" for 172.17.0.1 at 2023-02-06 18:27:09 +0000
+Cannot render console from 172.17.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by UserBooksController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering user_books/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."username" ASC[0m
+  ↳ app/views/user_books/_form.html.erb:16:in `map'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" ORDER BY "books"."title" ASC[0m
+  ↳ app/views/user_books/_form.html.erb:21:in `map'
+  Rendered user_books/_form.html.erb (Duration: 103.8ms | Allocations: 4742)
+  Rendered user_books/new.html.erb within layouts/application (Duration: 122.3ms | Allocations: 5042)
+  Rendered layout layouts/application.html.erb (Duration: 267.4ms | Allocations: 7360)
+Completed 200 OK in 327ms (Views: 268.7ms | ActiveRecord: 0.8ms | Allocations: 7804)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
