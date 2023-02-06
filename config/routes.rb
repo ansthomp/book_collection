@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :posts
 
   resources :books do
-    memeber do
+    member do
       get :delete
     end
   end

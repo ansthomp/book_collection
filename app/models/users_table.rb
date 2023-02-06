@@ -1,0 +1,2 @@
+class UsersTable < ApplicationRecord
+end
